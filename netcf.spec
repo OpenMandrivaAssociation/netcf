@@ -12,7 +12,7 @@ Summary: A distribution agnostic library and tool for configuring network interf
 URL: https://fedorahosted.org/netcf
 Source: https://fedorahosted.org/released/netcf/netcf-%{version}.tar.gz
 Source1: https://fedorahosted.org/released/netcf/netcf-%{version}.tar.gz.sig
-BuildRequires: augeas-devel libxslt-devel
+BuildRequires: augeas-devel libxslt-devel libnl-devel readline-devel
 BuildRoot: %{_tmppath}/%{name}-root
 
 %description
