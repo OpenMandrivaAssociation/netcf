@@ -5,7 +5,7 @@
 
 Name: %name
 Version: 0.1.7
-Release: %mkrel 1
+Release: %mkrel 2
 Group: Networking/Other
 License: LGPLv2
 Summary: A distribution agnostic library and tool for configuring network interfaces
