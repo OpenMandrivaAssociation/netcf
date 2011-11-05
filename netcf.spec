@@ -4,8 +4,8 @@
 %define libnamedevel %mklibname -d %name
 
 Name: %name
-Version: 0.1.7
-Release: %mkrel 2
+Version: 0.1.9
+Release: %mkrel 1
 Group: Networking/Other
 License: LGPLv2
 Summary: A distribution agnostic library and tool for configuring network interfaces
