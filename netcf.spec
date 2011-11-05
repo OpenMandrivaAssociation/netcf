@@ -66,6 +66,7 @@ rm -Rf %{buildroot}
 %defattr(-,root,root)
 %{_bindir}/*
 %{_datadir}/%{name}
+/etc/rc.d/init.d/netcf-transaction
 %doc README NEWS AUTHORS
 
 %files -n %libname
