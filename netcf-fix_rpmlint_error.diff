@@ -1,0 +1,12 @@
+Index: src/netcf-transaction.init.sh
+===================================================================
+--- src/netcf-transaction.init.sh
++++ src/netcf-transaction.init.sh	2012-03-05 18:06:09.611998139 +0100
+@@ -20,7 +20,6 @@
+ #              uncommitted changes to the network config, they are
+ #              reverted (and the discarded changes are archived in
+ #              /var/lib/netcf/network-rollback-*).
+-#
+ ### END INIT INFO
+ 
+ # special exit code that means a command was issued that is invalid for the
