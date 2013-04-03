@@ -1,10 +1,10 @@
-%define libmajor 1
-%define libname %mklibname %{name} %{libmajor}
+%define major 1
+%define libname %mklibname %{name} %{major}
 %define libnamedevel %mklibname -d %{name}
 
 Name:		netcf
 Version:	0.2.2
-Release:	3
+Release:	4
 Group:		Networking/Other
 License:	LGPLv2
 Summary:	A distribution agnostic library and tool for configuring network interfaces
@@ -72,7 +72,7 @@ autoreconf -fi
 %{_mandir}/man1/ncftool.1.*
 
 %files -n %{libname}
-%{_libdir}/*.so.%{libmajor}*
+%{_libdir}/*.so.%{major}*
 
 %files -n %{libnamedevel}
 %{_libdir}/*.so
