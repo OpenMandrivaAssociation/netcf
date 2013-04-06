@@ -4,7 +4,7 @@
 
 Name:		netcf
 Version:	0.2.2
-Release:	4
+Release:	5
 Group:		Networking/Other
 License:	LGPLv2
 Summary:	A distribution agnostic library and tool for configuring network interfaces
