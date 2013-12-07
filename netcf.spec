@@ -5,7 +5,7 @@
 Summary:	A distribution agnostic library and tool for configuring network interfaces
 Name:		netcf
 Version:	0.2.2
-Release:	7
+Release:	8
 Group:		Networking/Other
 License:	LGPLv2
 Url:		https://fedorahosted.org/netcf
