@@ -50,7 +50,7 @@ interfaces.
 
 %prep
 %setup -qn %{name}-release-%{version}
-autoreconf -fi
+#autoreconf -fi
 #see https://bugzilla.redhat.com/show_bug.cgi?id=852549
 #in future we should switch off with-libnl1 and use libnl3
 
