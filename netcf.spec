@@ -9,7 +9,7 @@ Release:	1
 Group:		Networking/Other
 License:	LGPLv2
 Url:		https://pagure.io/netcf
-Source0:	https://pagure.io/netcf/archive/release-0.2.8/netcf-release-0.2.8.tar.gz
+Source0:	https://fedorahosted.org/released/netcf/netcf-%{version}.tar.gz
 
 BuildRequires:	readline-devel
 BuildRequires:	pkgconfig(augeas)
@@ -49,8 +49,8 @@ Development files for a distribution agnostic library for configuring network
 interfaces.
 
 %prep
-%setup -qn %{name}-release-%{version}
-#autoreconf -fi
+%setup -q
+autoreconf -fi
 #see https://bugzilla.redhat.com/show_bug.cgi?id=852549
 #in future we should switch off with-libnl1 and use libnl3
 
