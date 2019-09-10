@@ -67,8 +67,8 @@ autoreconf -fi
 %doc README NEWS AUTHORS
 %{_bindir}/*
 %{_datadir}/%{name}
-#_unitdir/netcf-transaction.service
-#_libexecdir/netcf-transaction.sh
+/usr/lib/systemd/system/netcf-transaction.service
+%{_libexecdir}/netcf-transaction.sh
 %{_mandir}/man1/ncftool.1.*
 
 %files -n %{libname}
