@@ -15,6 +15,8 @@ BuildRequires:	readline-devel
 BuildRequires:	pkgconfig(augeas)
 BuildRequires:	pkgconfig(libnl-3.0)
 BuildRequires:	pkgconfig(libxslt)
+BuildRequires: pkgconfig(libgcrypt)
+BuildRequires: pkgconfig(gpg-error)
 
 %description
 netcf is
