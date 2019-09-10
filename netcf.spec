@@ -57,17 +57,18 @@ autoreconf -fi
 #in future we should switch off with-libnl1 and use libnl3
 
 %build
-%configure2_5x --disable-static
-%make
+%configure --disable-static
+%make_build
 
 %install
-%makeinstall_std
+%make_install
 
 %files
 %doc README NEWS AUTHORS
 %{_bindir}/*
 %{_datadir}/%{name}
-%{_initrddir}/netcf-transaction
+%_unitdir/netcf-transaction.service
+%_libexecdir/netcf-transaction.sh
 %{_mandir}/man1/ncftool.1.*
 
 %files -n %{libname}
