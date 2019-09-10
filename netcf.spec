@@ -4,18 +4,19 @@
 
 Summary:	A distribution agnostic library and tool for configuring network interfaces
 Name:		netcf
-Version:	0.2.2
-Release:	14
+Version:	0.2.8
+Release:	1
 Group:		Networking/Other
 License:	LGPLv2
-Url:		https://fedorahosted.org/netcf
+Url:		https://pagure.io/netcf
 Source0:	https://fedorahosted.org/released/netcf/netcf-%{version}.tar.gz
-Source1:	https://fedorahosted.org/released/netcf/netcf-%{version}.tar.gz.sig
-Patch0:		netcf-fix_rpmlint_error.diff
+
 BuildRequires:	readline-devel
 BuildRequires:	pkgconfig(augeas)
 BuildRequires:	pkgconfig(libnl-3.0)
 BuildRequires:	pkgconfig(libxslt)
+BuildRequires: pkgconfig(libgcrypt)
+BuildRequires: pkgconfig(gpg-error)
 
 %description
 netcf is
@@ -51,23 +52,23 @@ interfaces.
 
 %prep
 %setup -q
-%patch0 -p0
 autoreconf -fi
 #see https://bugzilla.redhat.com/show_bug.cgi?id=852549
 #in future we should switch off with-libnl1 and use libnl3
 
 %build
-%configure2_5x --disable-static
-%make
+%configure --disable-static
+%make_build
 
 %install
-%makeinstall_std
+%make_install
 
 %files
 %doc README NEWS AUTHORS
 %{_bindir}/*
 %{_datadir}/%{name}
-%{_initrddir}/netcf-transaction
+/usr/lib/systemd/system/netcf-transaction.service
+%{_libexecdir}/netcf-transaction.sh
 %{_mandir}/man1/ncftool.1.*
 
 %files -n %{libname}
