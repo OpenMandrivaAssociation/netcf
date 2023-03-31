@@ -5,7 +5,7 @@
 Summary:	A distribution agnostic library and tool for configuring network interfaces
 Name:		netcf
 Version:	0.2.8
-Release:	1
+Release:	2
 Group:		Networking/Other
 License:	LGPLv2
 Url:		https://pagure.io/netcf
