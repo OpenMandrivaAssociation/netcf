@@ -11,6 +11,11 @@ License:	LGPLv2
 Url:		https://pagure.io/netcf
 Source0:	https://fedorahosted.org/released/netcf/netcf-%{version}.tar.gz
 
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 BuildRequires:	readline-devel
 BuildRequires:	pkgconfig(augeas)
 BuildRequires:	pkgconfig(libnl-3.0)
