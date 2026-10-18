@@ -62,7 +62,9 @@ autoreconf -fi
 #in future we should switch off with-libnl1 and use libnl3
 
 %build
-%configure --disable-static
+# The ABF chroot has no /etc/systemd, so the default check installs a
+# SysV script and %files misses the unit.
+%configure --disable-static --with-sysinit=systemd
 %make_build
 
 %install
